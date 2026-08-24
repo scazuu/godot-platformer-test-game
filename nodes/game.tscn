@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://df0sd53aoqput"]
+
+[ext_resource type="PackedScene" uid="uid://bcu04ln85a3v5" path="res://nodes/player.tscn" id="1_hneav"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_doqle"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ynw7a"]
+distance = -2.0
+
+[node name="Game" type="Node2D" unique_id=429086974]
+
+[node name="Player" parent="." unique_id=1285805192 instance=ExtResource("1_hneav")]
+position = Vector2(0, -9)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=954581724]
+zoom = Vector2(2.745, 2.745)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1904107613]
+physics_material_override = SubResource("PhysicsMaterial_doqle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1431240340]
+shape = SubResource("WorldBoundaryShape2D_ynw7a")
