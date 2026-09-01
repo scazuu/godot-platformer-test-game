@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -300.0
+var IS_DEAD: bool = false
 
 @onready var player_animatedSprite = $AnimatedSprite2D
 
@@ -15,20 +16,22 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	# Handle movement.
-	# gets direction - it will either be a 1 or -1, defaults at start is 0.
+	# gets direction - it will either be a 1 or -1, defaults at start is 0
 	var direction := Input.get_axis("move_left", "move_right")
 
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if not IS_DEAD:
+		if direction:
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	# Handles sprites.
 	# flips sprite on direction
-	if direction > 0:
-		player_animatedSprite.flip_h = false
-	elif direction < 0:
-		player_animatedSprite.flip_h = true
+	if not IS_DEAD:
+		if direction > 0:
+			player_animatedSprite.flip_h = false
+		elif direction < 0:
+			player_animatedSprite.flip_h = true
 
 	# changes animations based on actions
 	if is_on_floor():
