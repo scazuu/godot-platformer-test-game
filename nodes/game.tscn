@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bcxihr8tfulgg" path="res://nodes/coin.tscn" id="4_6hfer"]
 [ext_resource type="PackedScene" uid="uid://cghrhq3ism4at" path="res://nodes/kill_zone.tscn" id="5_flw6b"]
 [ext_resource type="PackedScene" uid="uid://cspmivememkdm" path="res://nodes/enemy_slime.tscn" id="6_iae2t"]
+[ext_resource type="PackedScene" uid="uid://brmsusoyxoy0k" path="res://nodes/pause_menu.tscn" id="7_7idfb"]
 
 [sub_resource type="Animation" id="Animation_6hfer"]
 length = 0.001
@@ -105,6 +106,7 @@ position = Vector2(-238, 121)
 position = Vector2(-253, 30)
 
 [node name="KillZone" parent="." unique_id=1582054700 instance=ExtResource("5_flw6b")]
+position = Vector2(0, 126)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=2000919635]
 position = Vector2(0, 160)
@@ -112,3 +114,5 @@ shape = SubResource("WorldBoundaryShape2D_ynw7a")
 
 [node name="enemy_slime" parent="." unique_id=1837788372 instance=ExtResource("6_iae2t")]
 position = Vector2(114, 116)
+
+[node name="PauseMenu" parent="." unique_id=299016011 instance=ExtResource("7_7idfb")]
