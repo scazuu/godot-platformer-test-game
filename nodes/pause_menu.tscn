@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://brmsusoyxoy0k"]
 
 [ext_resource type="Script" uid="uid://dyw804yxgip31" path="res://scripts/pause_menu.gd" id="1_5j5rn"]
+[ext_resource type="Script" uid="uid://4mcwum5yoqb7" path="res://scripts/button_manager.gd" id="2_ff2c6"]
+[ext_resource type="FontFile" uid="uid://8di7nhlneth3" path="res://textures/fonts/m5x7.ttf" id="3_r8wsw"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=299016011]
 script = ExtResource("1_5j5rn")
@@ -34,28 +36,35 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.14889497, 0.046625867, 0.22599894, 0.22745098)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=2071453201]
+[node name="VBoxContainer" type="Control" parent="Control" unique_id=2073142199]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.31006
-offset_top = -46.5
-offset_right = 77.31006
-offset_bottom = 46.5
+offset_left = -634.0
+offset_top = -200.0
+offset_right = 634.0
+offset_bottom = 200.00049
 grow_horizontal = 2
 grow_vertical = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="Control/VBoxContainer" unique_id=128692094]
-layout_mode = 2
+script = ExtResource("2_ff2c6")
 
 [node name="ResumeButton" type="Button" parent="Control/VBoxContainer" unique_id=386833069]
-layout_mode = 2
+layout_mode = 0
+offset_top = 9.0
+offset_right = 1268.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("3_r8wsw")
+theme_override_font_sizes/font_size = 160
 text = "RESUME"
 
 [node name="QuitButton" type="Button" parent="Control/VBoxContainer" unique_id=1732322211]
-layout_mode = 2
-text = "QUIT"
+layout_mode = 0
+offset_top = 277.0
+offset_right = 1268.0
+offset_bottom = 412.0
+theme_override_fonts/font = ExtResource("3_r8wsw")
+theme_override_font_sizes/font_size = 160
+text = "RETURN TO MENU"
