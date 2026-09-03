@@ -26,4 +26,5 @@ func on_resume() -> void:
 	toggle_pause()
 
 func on_quit() -> void:
-	get_tree().quit()
+	toggle_pause()
+	get_tree().change_scene_to_file("res://nodes/main_menu.tscn")
