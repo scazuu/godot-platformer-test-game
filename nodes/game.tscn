@@ -52,14 +52,12 @@ _data = {
 position = Vector2(0, -9)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=954581724]
-zoom = Vector2(2.745, 2.745)
-process_callback = 0
+zoom = Vector2(4.51, 4.51)
 limit_left = -363
 limit_top = -173
 limit_right = 316
-limit_bottom = 283
+limit_bottom = 191
 limit_smoothed = true
-position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="TilemapLayer" type="Node2D" parent="." unique_id=643317856]
@@ -109,7 +107,7 @@ position = Vector2(-253, 30)
 position = Vector2(0, 126)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=2000919635]
-position = Vector2(0, 160)
+position = Vector2(0, 49)
 shape = SubResource("WorldBoundaryShape2D_ynw7a")
 
 [node name="enemy_slime" parent="." unique_id=1837788372 instance=ExtResource("6_iae2t")]
